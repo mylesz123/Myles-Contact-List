@@ -74,10 +74,17 @@ class ContactsViewController: UIViewController {
     /*This method registers the code for notifications and tells the system to execute the appropriate method when the event occurs.*/
     func registerKeyboardNotifications() {
        NotificationCenter.default.addObserver(
-        self,
-        selector: #selector(self.keyboardDidShow(notification:)),
-        name: UIResponder.keyboardDidShowNotification,
-        object: nil
+            self,
+            selector: #selector(self.keyboardDidShow(notification:)),
+            name: UIResponder.keyboardDidShowNotification,
+            object: nil
+        )
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.keyboardWillHide(notification:)),
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil
         )
     }
     
@@ -99,7 +106,7 @@ class ContactsViewController: UIViewController {
     }
     
     /*When the keyboard disappears, the scroll view’s content insert values are set back to the original values.*/
-    func keyboardWillHide(notification: NSNotification) {
+    @objc func keyboardWillHide(notification: NSNotification) {
         var contentInset = self.scrollView.contentInset
         contentInset.bottom = 0
         
