@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		DE1F3E10236E3E4700469359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F3E0F236E3E4700469359 /* AppDelegate.swift */; };
 		DE1F3E12236E3E4700469359 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F3E11236E3E4700469359 /* SceneDelegate.swift */; };
-		DE1F3E14236E3E4700469359 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F3E13236E3E4700469359 /* FirstViewController.swift */; };
-		DE1F3E16236E3E4700469359 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F3E15236E3E4700469359 /* SecondViewController.swift */; };
+		DE1F3E14236E3E4700469359 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F3E13236E3E4700469359 /* ContactsViewController.swift */; };
+		DE1F3E16236E3E4700469359 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F3E15236E3E4700469359 /* MapViewController.swift */; };
 		DE1F3E19236E3E4700469359 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1F3E17236E3E4700469359 /* Main.storyboard */; };
 		DE1F3E1B236E3E4800469359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE1F3E1A236E3E4800469359 /* Assets.xcassets */; };
 		DE1F3E1E236E3E4800469359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1F3E1C236E3E4800469359 /* LaunchScreen.storyboard */; };
 		DE1F3E29236E3E4800469359 /* Myles_Contact_ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F3E28236E3E4800469359 /* Myles_Contact_ListTests.swift */; };
+		DE1F3E34236E416500469359 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F3E33236E416500469359 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +32,8 @@
 		DE1F3E0C236E3E4700469359 /* Myles Contact List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Myles Contact List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1F3E0F236E3E4700469359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE1F3E11236E3E4700469359 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DE1F3E13236E3E4700469359 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		DE1F3E15236E3E4700469359 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		DE1F3E13236E3E4700469359 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		DE1F3E15236E3E4700469359 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DE1F3E18236E3E4700469359 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE1F3E1A236E3E4800469359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE1F3E1D236E3E4800469359 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +41,7 @@
 		DE1F3E24236E3E4800469359 /* Myles Contact ListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Myles Contact ListTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1F3E28236E3E4800469359 /* Myles_Contact_ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Myles_Contact_ListTests.swift; sourceTree = "<group>"; };
 		DE1F3E2A236E3E4800469359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE1F3E33236E416500469359 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +85,13 @@
 			children = (
 				DE1F3E0F236E3E4700469359 /* AppDelegate.swift */,
 				DE1F3E11236E3E4700469359 /* SceneDelegate.swift */,
-				DE1F3E13236E3E4700469359 /* FirstViewController.swift */,
-				DE1F3E15236E3E4700469359 /* SecondViewController.swift */,
+				DE1F3E13236E3E4700469359 /* ContactsViewController.swift */,
+				DE1F3E15236E3E4700469359 /* MapViewController.swift */,
 				DE1F3E17236E3E4700469359 /* Main.storyboard */,
 				DE1F3E1A236E3E4800469359 /* Assets.xcassets */,
 				DE1F3E1C236E3E4800469359 /* LaunchScreen.storyboard */,
 				DE1F3E1F236E3E4800469359 /* Info.plist */,
+				DE1F3E33236E416500469359 /* SettingsViewController.swift */,
 			);
 			path = "Myles Contact List";
 			sourceTree = "<group>";
@@ -203,9 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE1F3E16236E3E4700469359 /* SecondViewController.swift in Sources */,
-				DE1F3E14236E3E4700469359 /* FirstViewController.swift in Sources */,
+				DE1F3E16236E3E4700469359 /* MapViewController.swift in Sources */,
+				DE1F3E14236E3E4700469359 /* ContactsViewController.swift in Sources */,
 				DE1F3E10236E3E4700469359 /* AppDelegate.swift in Sources */,
+				DE1F3E34236E416500469359 /* SettingsViewController.swift in Sources */,
 				DE1F3E12236E3E4700469359 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +373,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J4HP4VF87A;
 				INFOPLIST_FILE = "Myles Contact List/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -387,6 +392,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J4HP4VF87A;
 				INFOPLIST_FILE = "Myles Contact List/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
