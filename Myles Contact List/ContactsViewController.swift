@@ -9,11 +9,55 @@
 import UIKit
 
 class ContactsViewController: UIViewController {
+    @IBOutlet weak var sgmtEditMode: UISegmentedControl!
     @IBOutlet weak var scrollView: UIScrollView!
+    //@IBOutlet weak var sgmtSwitchEditMode: UISwitch!
+    @IBOutlet weak var txtName: UITextField!
+    @IBOutlet weak var txtAddress: UITextField!
+    @IBOutlet weak var txtCity: UITextField!
+    @IBOutlet weak var txtState: UITextField!
+    @IBOutlet weak var txtZip: UITextField!
+    @IBOutlet weak var txtHomePhone: UITextField!
+    @IBOutlet weak var txtCellPhone: UITextField!
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var BirthDate: UILabel!
+    @IBOutlet weak var ChangeButton: UIButton!
+    
+    
+    /*called anytime the value of the Segmented Control is changed, but the method call doesn’t indicate the current value of the control, so you need to add an outlet to be able to reference and read the value.*/
+    @IBAction func changeEditMode(_ sender: Any) {
+        let textFields: [UITextField] = [
+            txtName, txtAddress, txtCity, txtState, txtZip, txtHomePhone, txtCellPhone, txtEmail
+        ]
+
+        if sgmtEditMode.selectedSegmentIndex == 0 { //View Mode
+            for textField in textFields {
+                textField.isEnabled = false
+                textField.borderStyle = UITextField.BorderStyle.none
+                //                textField.borderStyle = UITextBorderStyle.none --> OLD CODE 🤷🏾‍♂️
+
+            }
+            ChangeButton.isHidden = true
+            navigationItem.rightBarButtonItem = nil
+        }
+        else if sgmtEditMode.selectedSegmentIndex == 1{ //Edit Mode
+            for textField in textFields {
+                textField.isEnabled = true
+                textField.borderStyle = UITextField.BorderStyle.roundedRect
+            }
+            ChangeButton.isHidden = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

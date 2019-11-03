@@ -21,6 +21,9 @@
                                     <segment title="View"/>
                                     <segment title="Edit"/>
                                 </segments>
+                                <connections>
+                                    <action selector="changeEditMode:" destination="9pv-A4-QxB" eventType="valueChanged" id="vEr-Vh-Je2"/>
+                                </connections>
                             </segmentedControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="z8s-NO-7cu" userLabel="Contacts Scroll View">
                                 <rect key="frame" x="-20" y="70" width="454" height="335.5"/>
@@ -190,7 +193,18 @@
                     </view>
                     <navigationItem key="navigationItem" title="Contact" id="R7Q-V4-qbm"/>
                     <connections>
+                        <outlet property="BirthDate" destination="Fcx-Jm-jfX" id="o5d-Wh-MU7"/>
+                        <outlet property="ChangeButton" destination="snZ-WZ-bLL" id="dxg-eV-AP0"/>
                         <outlet property="scrollView" destination="z8s-NO-7cu" id="MkZ-m8-hVd"/>
+                        <outlet property="sgmtEditMode" destination="6Dv-pi-l4W" id="Hat-00-0bq"/>
+                        <outlet property="txtAddress" destination="5aS-2r-3IS" id="YZV-iX-yZs"/>
+                        <outlet property="txtCellPhone" destination="sUe-Po-4c5" id="jp0-wB-vV4"/>
+                        <outlet property="txtCity" destination="Qdf-hy-xGr" id="mbP-Ac-ZT9"/>
+                        <outlet property="txtEmail" destination="3Mg-0a-wky" id="O9c-kt-sWv"/>
+                        <outlet property="txtHomePhone" destination="FHp-i5-Wjh" id="q72-4t-Zby"/>
+                        <outlet property="txtName" destination="e4a-hd-lWw" id="dle-L9-729"/>
+                        <outlet property="txtState" destination="M0U-Ib-7eQ" id="LLc-Yg-YEM"/>
+                        <outlet property="txtZip" destination="Qqp-JQ-20t" id="0A3-Nx-mJC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -204,10 +218,18 @@
                     <view key="view" contentMode="scaleToFill" id="nqd-1g-fMv" userLabel="Birthdate View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="C4e-lt-sSQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Hgl-Mh-U18"/>
                     </view>
-                    <navigationItem key="navigationItem" id="uhZ-E6-Skm"/>
+                    <navigationItem key="navigationItem" title="Birthdate" id="uhZ-E6-Skm">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="W9J-x4-Xey"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nxh-7M-cf1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
