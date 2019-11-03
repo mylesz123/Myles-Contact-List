@@ -25,13 +25,13 @@ class ContactsViewController: UIViewController {
     
     
     /*called anytime the value of the Segmented Control is changed, but the method call doesn’t indicate the current value of the control, so you need to add an outlet to be able to reference and read the value.*/
-    @IBAction func changeEditMode(_ sender: Any) {
+    @IBAction func changeToEditMode(_ sender: Any) {
         let textFields: [UITextField] = [
             txtName, txtAddress, txtCity, txtState, txtZip, txtHomePhone, txtCellPhone, txtEmail
         ]
 
         if sgmtEditMode.selectedSegmentIndex == 0 { //View Mode
-            for textField in textFields {
+            for textField in textFields { 
                 textField.isEnabled = false
                 textField.borderStyle = UITextField.BorderStyle.none
                 //                textField.borderStyle = UITextBorderStyle.none --> OLD CODE 🤷🏾‍♂️
@@ -40,7 +40,7 @@ class ContactsViewController: UIViewController {
             ChangeButton.isHidden = true
             navigationItem.rightBarButtonItem = nil
         }
-        else if sgmtEditMode.selectedSegmentIndex == 1{ //Edit Mode
+        else if sgmtEditMode.selectedSegmentIndex == 1 { //Edit Mode
             for textField in textFields {
                 textField.isEnabled = true
                 textField.borderStyle = UITextField.BorderStyle.roundedRect
