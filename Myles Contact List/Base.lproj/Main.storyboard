@@ -241,21 +241,48 @@
         <scene sceneID="zoj-nw-bt8">
             <objects>
                 <viewController title="Settings" id="xO3-lP-JVa" customClass="SettingsViewController" customModule="Myles_Contact_List" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zAv-zz-k35">
+                    <view key="view" contentMode="scaleToFill" id="zAv-zz-k35" userLabel="Settings View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="JGW-NB-YKZ">
-                                <rect key="frame" x="143" y="426.5" width="128" height="43"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="zV6-wZ-7gp" userLabel="Sort Order Stack View">
+                                <rect key="frame" x="42.5" y="255.5" width="329" height="346"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Sort Order: " textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="JGW-NB-YKZ">
+                                        <rect key="frame" x="75.5" y="0.0" width="178" height="43"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAy-36-Ry0">
+                                        <rect key="frame" x="4.5" y="71" width="320" height="216"/>
+                                    </pickerView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U0w-no-al3" userLabel="ASC order Stack View">
+                                        <rect key="frame" x="0.0" y="315" width="329" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Ascending Order:" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="CAr-Lx-fXT">
+                                                <rect key="frame" x="0.0" y="0.0" width="270" height="31"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UHB-08-oFY">
+                                                <rect key="frame" x="280" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="346" id="OiW-Av-8Ib"/>
+                                    <constraint firstAttribute="width" constant="329" id="QWZ-AZ-TfC"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="JGW-NB-YKZ" firstAttribute="centerX" secondItem="zAv-zz-k35" secondAttribute="centerX" id="GEV-6v-UaV"/>
-                            <constraint firstItem="JGW-NB-YKZ" firstAttribute="centerY" secondItem="zAv-zz-k35" secondAttribute="centerY" id="wuJ-dU-I9l"/>
+                            <constraint firstItem="zV6-wZ-7gp" firstAttribute="centerX" secondItem="XVL-Tg-k5T" secondAttribute="centerX" id="GyH-BC-Ioe"/>
+                            <constraint firstItem="zV6-wZ-7gp" firstAttribute="centerY" secondItem="XVL-Tg-k5T" secondAttribute="centerY" id="TsE-8J-heJ"/>
+                            <constraint firstItem="GAy-36-Ry0" firstAttribute="centerX" secondItem="XVL-Tg-k5T" secondAttribute="centerX" id="ar6-ZA-hul"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XVL-Tg-k5T"/>
                     </view>
@@ -263,7 +290,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHR-fd-Hz7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="803" y="0.0"/>
+            <point key="canvasLocation" x="802.89855072463774" y="0.0"/>
         </scene>
         <!--Map-->
         <scene sceneID="wg7-f3-ORb">
