@@ -268,6 +268,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UHB-08-oFY">
                                                 <rect key="frame" x="280" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="sortDirectionChanged:" destination="xO3-lP-JVa" eventType="valueChanged" id="c1S-fO-BqR"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -287,6 +290,10 @@
                         <viewLayoutGuide key="safeArea" id="XVL-Tg-k5T"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="09O-Gy-q4x"/>
+                    <connections>
+                        <outlet property="pickSortField" destination="GAy-36-Ry0" id="zzE-Kf-xJe"/>
+                        <outlet property="switchAsc" destination="UHB-08-oFY" id="kQB-iX-dJW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHR-fd-Hz7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
