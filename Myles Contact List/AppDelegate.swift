@@ -16,16 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         let settings = UserDefaults.standard
         
-        if(settings.string(forKey: "sortfield") == nil ) {
-            settings.set("City", forKey: "sortField")
+        if(settings.string(forKey: Constants.kSortField) == nil ) {
+            settings.set("City", forKey: Constants.kSortField)
         }
-        if(settings.string(forKey: "sortDirectionAscending") == nil) {
-            settings.set(true, forKey: "sortDirectionAscending")
+        if(settings.string(forKey: Constants.kSortDirection) == nil) {
+            settings.set(true, forKey: Constants.kSortDirection)
         }
         settings.synchronize()
         
-        print("Sort field : \(settings.string(forKey: "sortField")!)")
-        print("Sort direction : \(settings.bool(forKey: "sortDirectionAscending"))")
+        NSLog("Sort field : %@", settings.string(forKey: Constants.kSortField)!)
+        NSLog("Sort direction : \(settings.bool(forKey: Constants.kSortDirection))")
 
         return true
     }

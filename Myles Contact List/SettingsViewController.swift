@@ -30,7 +30,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         pickSortField.dataSource = self
         pickSortField.delegate = self
@@ -38,17 +38,18 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
     override func viewWillAppear(_ animated: Bool) {
         let settings = UserDefaults.standard
-        switchAsc.setOn(settings.bool(forKey: "sortDirectionAscending"), animated: true)
+        switchAsc.setOn(settings.bool(forKey: Constants.kSortDirection), animated: true)
         
-        let sortField = settings.string(forKey: "sortField")
+        let sortField = settings.string(forKey: Constants.kSortField)
         var i = 0
         for field in sortOrderItems {
+            // if a row is found in the array, return that row
             if field == sortField {
                 pickSortField.selectRow(i, inComponent: 0, animated: false)
             }
             i += 1
         }
-        pickSortField.reloadComponent(0)
+        pickSortField.reloadAllComponents() // changes the picker view
     }
     
     override func didReceiveMemoryWarning() {
@@ -76,15 +77,15 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let sortField = sortOrderItems[row]
         let settings = UserDefaults.standard
-        settings.set(sortField, forKey: "sortField")
+        settings.set(sortField, forKey: Constants.kSortField)
         settings.synchronize()
         print("Chosen Item: \(sortOrderItems[row])")
     }
     
     @IBAction func sortDirectionChanged(_ sender: Any) {
         let settings = UserDefaults.standard
-        settings.set(switchAsc.isOn, forKey: "sortDirectionAscending")
+        settings.set(switchAsc.isOn, forKey: Constants.kSortDirection)
         settings.synchronize()
-        print("Chosen Item: \(settings.bool(forKey: "sortDirectionAscending"))")
+        print("Chosen Item: \(settings.bool(forKey: Constants.kSortDirection))")
     }
 }
