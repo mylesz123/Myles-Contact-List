@@ -16,6 +16,7 @@
 		DE1F3E1E236E3E4800469359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1F3E1C236E3E4800469359 /* LaunchScreen.storyboard */; };
 		DE1F3E29236E3E4800469359 /* Myles_Contact_ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F3E28236E3E4800469359 /* Myles_Contact_ListTests.swift */; };
 		DE1F3E34236E416500469359 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F3E33236E416500469359 /* SettingsViewController.swift */; };
+		DEEF488C2371A26A00B3E210 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEF488B2371A26A00B3E210 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		DE1F3E28236E3E4800469359 /* Myles_Contact_ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Myles_Contact_ListTests.swift; sourceTree = "<group>"; };
 		DE1F3E2A236E3E4800469359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE1F3E33236E416500469359 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DEEF488B2371A26A00B3E210 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 		DE1F3E03236E3E4700469359 = {
 			isa = PBXGroup;
 			children = (
+				DEEF488B2371A26A00B3E210 /* Constants.swift */,
 				DE1F3E0E236E3E4700469359 /* Myles Contact List */,
 				DE1F3E27236E3E4800469359 /* Myles Contact ListTests */,
 				DE1F3E0D236E3E4700469359 /* Products */,
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE1F3E16236E3E4700469359 /* MapViewController.swift in Sources */,
+				DEEF488C2371A26A00B3E210 /* Constants.swift in Sources */,
 				DE1F3E14236E3E4700469359 /* ContactsViewController.swift in Sources */,
 				DE1F3E10236E3E4700469359 /* AppDelegate.swift in Sources */,
 				DE1F3E34236E416500469359 /* SettingsViewController.swift in Sources */,
