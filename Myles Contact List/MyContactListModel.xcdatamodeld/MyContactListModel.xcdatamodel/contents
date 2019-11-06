@@ -11,7 +11,12 @@
         <attribute name="streetAddress" optional="YES" attributeType="String"/>
         <attribute name="zipCode" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="Settings" representedClassName="Settings" syncable="YES" codeGenerationType="class">
+        <attribute name="sortBy" optional="YES" attributeType="String"/>
+        <attribute name="sortOrder" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
         <element name="Contact" positionX="-63" positionY="-18" width="128" height="178"/>
+        <element name="Settings" positionX="-63" positionY="54" width="128" height="73"/>
     </elements>
 </model>

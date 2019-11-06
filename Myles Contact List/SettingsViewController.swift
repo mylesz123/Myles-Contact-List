@@ -14,17 +14,17 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     @IBOutlet weak var pickSortField: UIPickerView!
     
     let sortOrderItems: Array<String> = [
-        "ContactName", "City", "Birthday"
+        "ContactName", "City", "Birthday","EmailAddress"
     ]
     
-    //    WARNING !! this is what is preventing the preferences from getting saved.
+    //    this is what is preventing the preferences from getting saved.
     func sortSettings() {
         let settings = UserDefaults.standard
         settings.set("City", forKey: "sortField") //       getting a reference to the standard UserDefaults object
-   //     settings.string(forKey: "sortField") ?? ""    //        retrieve value
+        settings.string(forKey: "sortField") ?? ""    //        retrieve value
 
         settings.set(true, forKey: "sortDirectionAscending")    //       save bool value for ASC order
-        settings.bool(forKey: "sortDirectionAscending")    //    retrieve value
+        settings.bool(forKey: "sortDirectionAscending")    //    retrieve the  value
     }
     //    WARNING !! is not supposed to wrapped in function
     
@@ -43,7 +43,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         let sortField = settings.string(forKey: Constants.kSortField)
         var i = 0
         for field in sortOrderItems {
-            // if a row is found in the array, return that row
+            // if a row is found in the array,then return that row
             if field == sortField {
                 pickSortField.selectRow(i, inComponent: 0, animated: false)
             }
@@ -56,9 +56,9 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         super.didReceiveMemoryWarning()
     }
     
-/*    UIPicker Delegates and data source methods Data Sources*/
+/*    UIPicker, Delegates, andthe data source methods */
     
-//    return # of rows to display
+//    number of rows to display
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
