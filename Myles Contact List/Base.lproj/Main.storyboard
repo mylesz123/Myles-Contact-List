@@ -165,7 +165,7 @@
                                                         <rect key="frame" x="283.5" y="0.0" width="110.5" height="30"/>
                                                         <state key="normal" title="Change"/>
                                                         <connections>
-                                                            <segue destination="KqJ-6T-V7I" kind="show" id="UIL-Mq-Tum"/>
+                                                            <segue destination="KqJ-6T-V7I" kind="show" identifier="segueContactDate" id="UIL-Mq-Tum"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -214,7 +214,7 @@
         <!--Birthdate-->
         <scene sceneID="Zcg-QR-9M3">
             <objects>
-                <viewController title="Birthdate" id="KqJ-6T-V7I" sceneMemberID="viewController">
+                <viewController title="Birthdate" id="KqJ-6T-V7I" customClass="DateViewController" customModule="Myles_Contact_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nqd-1g-fMv" userLabel="Birthdate View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -232,6 +232,9 @@
                     <navigationItem key="navigationItem" title="Birthdate" id="uhZ-E6-Skm">
                         <barButtonItem key="backBarButtonItem" title="Back" id="W9J-x4-Xey"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dtpDate" destination="C4e-lt-sSQ" id="MFC-pV-ZwP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nxh-7M-cf1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
