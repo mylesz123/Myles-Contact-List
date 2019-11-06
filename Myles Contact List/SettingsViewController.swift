@@ -21,7 +21,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     func sortSettings() {
         let settings = UserDefaults.standard
         settings.set("City", forKey: "sortField") //       getting a reference to the standard UserDefaults object
-        settings.string(forKey: "sortField") ?? ""    //        retrieve value
+   //     settings.string(forKey: "sortField") ?? ""    //        retrieve value
 
         settings.set(true, forKey: "sortDirectionAscending")    //       save bool value for ASC order
         settings.bool(forKey: "sortDirectionAscending")    //    retrieve value
