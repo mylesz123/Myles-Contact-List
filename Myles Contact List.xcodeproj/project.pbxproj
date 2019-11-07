@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D1A16F0237304CB0034EABD /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1A16EF237304CB0034EABD /* DateViewController.swift */; };
 		1D268DAC237249D000473302 /* MyContactListModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D268DAA237249D000473302 /* MyContactListModel.xcdatamodeld */; };
+		6CE61992109F4696AC80C1BD /* Pods_Myles_Contact_ListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE6916577A5323524AC689D /* Pods_Myles_Contact_ListTests.framework */; };
 		DE1F3E10236E3E4700469359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F3E0F236E3E4700469359 /* AppDelegate.swift */; };
 		DE1F3E12236E3E4700469359 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F3E11236E3E4700469359 /* SceneDelegate.swift */; };
 		DE1F3E14236E3E4700469359 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F3E13236E3E4700469359 /* ContactsViewController.swift */; };
@@ -18,7 +19,9 @@
 		DE1F3E1E236E3E4800469359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1F3E1C236E3E4800469359 /* LaunchScreen.storyboard */; };
 		DE1F3E29236E3E4800469359 /* Myles_Contact_ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F3E28236E3E4800469359 /* Myles_Contact_ListTests.swift */; };
 		DE1F3E34236E416500469359 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F3E33236E416500469359 /* SettingsViewController.swift */; };
+		DEDC45862373D4FE003FEEE4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEDC45852373D4FE003FEEE4 /* GoogleService-Info.plist */; };
 		DEEF488C2371A26A00B3E210 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEF488B2371A26A00B3E210 /* Constants.swift */; };
+		F0AF13B43E1F1DD85429FA49 /* Pods_Myles_Contact_List.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C1EC658738A68197B8102E /* Pods_Myles_Contact_List.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,12 @@
 /* Begin PBXFileReference section */
 		1D1A16EF237304CB0034EABD /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 		1D268DAB237249D000473302 /* MyContactListModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyContactListModel.xcdatamodel; sourceTree = "<group>"; };
+		2AE6916577A5323524AC689D /* Pods_Myles_Contact_ListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Myles_Contact_ListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35790A669DF6EC2DEBAA23A7 /* Pods-Myles Contact List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myles Contact List.debug.xcconfig"; path = "Target Support Files/Pods-Myles Contact List/Pods-Myles Contact List.debug.xcconfig"; sourceTree = "<group>"; };
+		47BAB63F88D0F3D255D9B97A /* Pods-Myles Contact ListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myles Contact ListTests.debug.xcconfig"; path = "Target Support Files/Pods-Myles Contact ListTests/Pods-Myles Contact ListTests.debug.xcconfig"; sourceTree = "<group>"; };
+		63C1EC658738A68197B8102E /* Pods_Myles_Contact_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Myles_Contact_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4DC3A85E44C825E50102A76 /* Pods-Myles Contact ListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myles Contact ListTests.release.xcconfig"; path = "Target Support Files/Pods-Myles Contact ListTests/Pods-Myles Contact ListTests.release.xcconfig"; sourceTree = "<group>"; };
+		C9842791286496A445AACB62 /* Pods-Myles Contact List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myles Contact List.release.xcconfig"; path = "Target Support Files/Pods-Myles Contact List/Pods-Myles Contact List.release.xcconfig"; sourceTree = "<group>"; };
 		DE1F3E0C236E3E4700469359 /* Myles Contact List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Myles Contact List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1F3E0F236E3E4700469359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE1F3E11236E3E4700469359 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +56,7 @@
 		DE1F3E28236E3E4800469359 /* Myles_Contact_ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Myles_Contact_ListTests.swift; sourceTree = "<group>"; };
 		DE1F3E2A236E3E4800469359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE1F3E33236E416500469359 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DEDC45852373D4FE003FEEE4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DEEF488B2371A26A00B3E210 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0AF13B43E1F1DD85429FA49 /* Pods_Myles_Contact_List.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,12 +73,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CE61992109F4696AC80C1BD /* Pods_Myles_Contact_ListTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A1B422A938E8DB66B585EFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63C1EC658738A68197B8102E /* Pods_Myles_Contact_List.framework */,
+				2AE6916577A5323524AC689D /* Pods_Myles_Contact_ListTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DE1F3E03236E3E4700469359 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +96,8 @@
 				DE1F3E0E236E3E4700469359 /* Myles Contact List */,
 				DE1F3E27236E3E4800469359 /* Myles Contact ListTests */,
 				DE1F3E0D236E3E4700469359 /* Products */,
+				DE43A054F5B50DD9E4EEF465 /* Pods */,
+				2A1B422A938E8DB66B585EFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +113,7 @@
 		DE1F3E0E236E3E4700469359 /* Myles Contact List */ = {
 			isa = PBXGroup;
 			children = (
+				DEDC45852373D4FE003FEEE4 /* GoogleService-Info.plist */,
 				DE1F3E0F236E3E4700469359 /* AppDelegate.swift */,
 				1D268DAA237249D000473302 /* MyContactListModel.xcdatamodeld */,
 				DE1F3E11236E3E4700469359 /* SceneDelegate.swift */,
@@ -114,6 +138,18 @@
 			path = "Myles Contact ListTests";
 			sourceTree = "<group>";
 		};
+		DE43A054F5B50DD9E4EEF465 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35790A669DF6EC2DEBAA23A7 /* Pods-Myles Contact List.debug.xcconfig */,
+				C9842791286496A445AACB62 /* Pods-Myles Contact List.release.xcconfig */,
+				47BAB63F88D0F3D255D9B97A /* Pods-Myles Contact ListTests.debug.xcconfig */,
+				B4DC3A85E44C825E50102A76 /* Pods-Myles Contact ListTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE1F3E2D236E3E4800469359 /* Build configuration list for PBXNativeTarget "Myles Contact List" */;
 			buildPhases = (
+				3E7C4F180A1E83DD8311514C /* [CP] Check Pods Manifest.lock */,
 				DE1F3E08236E3E4700469359 /* Sources */,
 				DE1F3E09236E3E4700469359 /* Frameworks */,
 				DE1F3E0A236E3E4700469359 /* Resources */,
+				F221C1D4FF2AE5C7CD21ABFE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,6 +176,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE1F3E30236E3E4800469359 /* Build configuration list for PBXNativeTarget "Myles Contact ListTests" */;
 			buildPhases = (
+				192E57D5F4F1AAA9D63D9A1C /* [CP] Check Pods Manifest.lock */,
 				DE1F3E20236E3E4800469359 /* Sources */,
 				DE1F3E21236E3E4800469359 /* Frameworks */,
 				DE1F3E22236E3E4800469359 /* Resources */,
@@ -196,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE1F3E1E236E3E4800469359 /* LaunchScreen.storyboard in Resources */,
+				DEDC45862373D4FE003FEEE4 /* GoogleService-Info.plist in Resources */,
 				DE1F3E1B236E3E4800469359 /* Assets.xcassets in Resources */,
 				DE1F3E19236E3E4700469359 /* Main.storyboard in Resources */,
 			);
@@ -209,6 +249,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		192E57D5F4F1AAA9D63D9A1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Myles Contact ListTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E7C4F180A1E83DD8311514C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Myles Contact List-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F221C1D4FF2AE5C7CD21ABFE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Myles Contact List/Pods-Myles Contact List-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Myles Contact List/Pods-Myles Contact List-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Myles Contact List/Pods-Myles Contact List-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DE1F3E08236E3E4700469359 /* Sources */ = {
@@ -380,6 +484,7 @@
 		};
 		DE1F3E2E236E3E4800469359 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35790A669DF6EC2DEBAA23A7 /* Pods-Myles Contact List.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -399,6 +504,7 @@
 		};
 		DE1F3E2F236E3E4800469359 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9842791286496A445AACB62 /* Pods-Myles Contact List.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -418,6 +524,7 @@
 		};
 		DE1F3E31236E3E4800469359 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47BAB63F88D0F3D255D9B97A /* Pods-Myles Contact ListTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -440,6 +547,7 @@
 		};
 		DE1F3E32236E3E4800469359 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4DC3A85E44C825E50102A76 /* Pods-Myles Contact ListTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
