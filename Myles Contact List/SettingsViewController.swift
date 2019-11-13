@@ -14,7 +14,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     @IBOutlet weak var pickSortField: UIPickerView!
     
     let sortOrderItems: Array<String> = [
-        "ContactName", "City", "Birthday","EmailAddress"
+        "contactName", "city", "birthday","email"
     ]
     
     //    this is what is preventing the preferences from getting saved.

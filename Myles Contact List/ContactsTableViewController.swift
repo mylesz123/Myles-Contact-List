@@ -37,16 +37,27 @@ loadDataFromDatabase()
     
     func loadDataFromDatabase() {
         //Read settings to enable sorting
-        let context = appDelegate.persistentContainer.viewContext
-        //Set up Request
-        let request = NSFetchRequest<NSManagedObject>(entityName: "Contact")
-        do {
-            contacts = try context.fetch(request)
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
+        //Read settings to enable sorting
+            let settings = UserDefaults.standard
+            let sortField = settings.string(forKey: Constants.kSortField)
+            let sortAscending = settings.bool(forKey: Constants.kSortDirection)
+            //Set up Core Data Context
+            let context = appDelegate.persistentContainer.viewContext
+            //Set up Request
+            let request = NSFetchRequest<NSManagedObject>(entityName: "Contact")
+            //Specify sorting
+            let sortDescriptor = NSSortDescriptor(key: sortField, ascending: sortAscending)
+            let sortDescriptorArray = [sortDescriptor]
+            //to sort by multiple fields, add more sort descriptors to the array
+            request.sortDescriptors = sortDescriptorArray
+            //Execute request
+            do {
+                contacts = try context.fetch(request)
+            } catch let error as NSError {
+                print("Could not fetch. \(error), \(error.userInfo)")
+            }
         }
-    }
-    
+        
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -98,7 +109,33 @@ loadDataFromDatabase()
                 // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
             }
         }
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+           let selectedContact = contacts[indexPath.row] as? Contact
+           let name = selectedContact!.contactName!
+           let actionHandler = { (action:UIAlertAction!) -> Void in
+               //            self.performSegue(withIdentifier: "EditContact", sender: tableView.cellForRow(at: indexPath))
+               let storyboard = UIStoryboard(name: "Main", bundle: nil)
+               let controller = storyboard.instantiateViewController(withIdentifier: "ContactController")
+                   as? ContactsViewController
+               controller?.currentContact = selectedContact
+               self.navigationController?.pushViewController(controller!, animated: true)
+           }
+           
+           let alertController = UIAlertController(title: "Contact selected",
+                                                   message: "Selected row: \(indexPath.row) (\(name))",
+               preferredStyle: .alert)
+           
+           let actionCancel = UIAlertAction(title: "Cancel",
+                                            style: .cancel,
+                                            handler: nil)
+           let actionDetails = UIAlertAction(title: "Show Details",
+                                             style: .default,
+                                             handler: actionHandler)
+           alertController.addAction(actionCancel)
+           alertController.addAction(actionDetails)
+           present(alertController, animated: true, completion: nil)
+       }
+       
 
     /*
     // Override to support rearranging the table view.
