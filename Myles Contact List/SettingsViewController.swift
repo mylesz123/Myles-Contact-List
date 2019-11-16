@@ -16,6 +16,9 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     let sortOrderItems: Array<String> = [
         "contactName", "city", "birthday","email"
     ]
+    let sortsecond: Array<String> = [
+       "address", "state","zipcode"
+    ]
     
     //    this is what is preventing the preferences from getting saved.
     func sortSettings() {
@@ -41,6 +44,8 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         switchAsc.setOn(settings.bool(forKey: Constants.kSortDirection), animated: true)
         
         let sortField = settings.string(forKey: Constants.kSortField)
+        let sortField2 = settings.string(forKey: Constants.kSortField)
+        
         var i = 0
         for field in sortOrderItems {
             // if a row is found in the array,then return that row
@@ -49,8 +54,20 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
             }
             i += 1
         }
-        pickSortField.reloadAllComponents() // changes the picker view
+        pickSortField.reloadComponent(0) // changes the picker view
+        
+        var j = 0
+            for field in sortOrderItems {
+                // if a row is found in the array,then return that row
+                if field == sortField {
+                    pickSortField.selectRow(i, inComponent: 1, animated: false)
+                }
+                j += 1
+            }
+            pickSortField.reloadComponent(1) // changes the picker view
+        
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -60,22 +77,28 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
 //    number of rows to display
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        return 2
     }
     
 //    returns number of rows in picker
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if component == 0{
         return sortOrderItems.count
+        }
+        return sortsecond.count
     }
 
 //    set value that is displayed in each row in the picker
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if component == 0 {
         return sortOrderItems[row]
     }
-    
+        return sortsecond[row]
+    }
 //    print the item that was selected
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let sortField = sortOrderItems[row]
+        let sortField = sortOrderItems[pickerView.selectedRow(inComponent: 0)]
+        let sortField2 = sortsecond[pickerView.selectedRow(inComponent: 1)]
         let settings = UserDefaults.standard
         settings.set(sortField, forKey: Constants.kSortField)
         settings.synchronize()

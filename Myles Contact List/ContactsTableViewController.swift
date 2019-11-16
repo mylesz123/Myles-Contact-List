@@ -40,6 +40,7 @@ loadDataFromDatabase()
         //Read settings to enable sorting
             let settings = UserDefaults.standard
             let sortField = settings.string(forKey: Constants.kSortField)
+            let sortField2 = settings.string(forKey: Constants.kSortField)
             let sortAscending = settings.bool(forKey: Constants.kSortDirection)
             //Set up Core Data Context
             let context = appDelegate.persistentContainer.viewContext
@@ -47,7 +48,8 @@ loadDataFromDatabase()
             let request = NSFetchRequest<NSManagedObject>(entityName: "Contact")
             //Specify sorting
             let sortDescriptor = NSSortDescriptor(key: sortField, ascending: sortAscending)
-            let sortDescriptorArray = [sortDescriptor]
+            let sortDescriptor2 = NSSortDescriptor(key: sortField2, ascending: sortAscending)
+            let sortDescriptorArray = [sortDescriptor,sortDescriptor2]
             //to sort by multiple fields, add more sort descriptors to the array
             request.sortDescriptors = sortDescriptorArray
             //Execute request
@@ -77,6 +79,7 @@ loadDataFromDatabase()
         let contact = contacts[indexPath.row] as? Contact
                cell.textLabel?.text = contact?.contactName
                cell.detailTextLabel?.text = contact?.city
+        
         cell.accessoryType = UITableViewCell.AccessoryType.detailDisclosureButton
                return cell
     }
