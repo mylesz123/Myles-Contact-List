@@ -313,21 +313,33 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Mkt-fE-mgo">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tJ-wj-vQq">
+                                <rect key="frame" x="339" y="64" width="55" height="30"/>
+                                <state key="normal" title="Find Me"/>
+                                <connections>
+                                    <action selector="findUser:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="FWA-iR-Wvh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6tJ-wj-vQq" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="20" id="11x-wz-esW"/>
                             <constraint firstItem="Mkt-fE-mgo" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="6qE-4o-96i"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="Mkt-fE-mgo" secondAttribute="trailing" id="HXl-tg-aQn"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="Mkt-fE-mgo" secondAttribute="bottom" id="QRU-O5-g8U"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="6tJ-wj-vQq" secondAttribute="trailing" constant="20" id="jOb-IF-QmQ"/>
                             <constraint firstItem="Mkt-fE-mgo" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="nnt-3t-A7D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="globe" catalog="system" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="mapView" destination="Mkt-fE-mgo" id="93j-vy-Afu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="828"/>
+            <point key="canvasLocation" x="0.0" y="827.67857142857144"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
