@@ -8,18 +8,22 @@
 
 import UIKit
 import CoreData
-class ContactsViewController: UIViewController, UITextFieldDelegate, DateControllerDelegate{
-    func dateChanged(date: Date) {if currentContact != nil {
-        currentContact!.birthday = date as NSDate? as Date?
-                appDelegate.saveContext()
-                let formatter = DateFormatter()
-                formatter.dateStyle = .short
-                BirthDate.text = formatter.string(from: date)
-            }
-        }
+
+class ContactsViewController: UIViewController, UITextFieldDelegate, DateControllerDelegate {
     
+    func dateChanged(date: Date) {
+        if currentContact != nil {
+            currentContact!.birthday = date as NSDate? as Date?
+            appDelegate.saveContext()
+            
+            let formatter = DateFormatter()
+            formatter.dateStyle = .short
+            BirthDate.text = formatter.string(from: date)
+        }
+    }
     
     var currentContact: Contact?
+    //reference to App Delegate thats used to access Core Data functionality.
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBOutlet weak var sgmtEditMode: UISegmentedControl!
@@ -40,15 +44,21 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, DateControl
     /*called anytime the value of the Segmented Control is changed, but the method call doesn’t indicate the current value of the control, so you need to add an outlet to be able to reference and read the value.*/
     @IBAction func changeToEditMode(_ sender: Any) {
         let textFields: [UITextField] = [
-            txtName, txtAddress, txtCity, txtState, txtZip, txtHomePhone, txtCellPhone, txtEmail
+            txtName,
+            txtAddress,
+            txtCity,
+            txtState,
+            txtZip,
+            txtHomePhone,
+            txtCellPhone,
+            txtEmail
         ]
 
         if sgmtEditMode.selectedSegmentIndex == 0 { //View Mode
             for textField in textFields { 
                 textField.isEnabled = false
                 textField.borderStyle = UITextField.BorderStyle.none
-                //                textField.borderStyle = UITextBorderStyle.none --> OLD CODE 🤷🏾‍♂️
-
+                //textField.borderStyle = UITextBorderStyle.none --> OLD CODE 🤷🏾‍♂️
             }
             ChangeButton.isHidden = true
             navigationItem.rightBarButtonItem = nil
@@ -58,35 +68,57 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, DateControl
                 textField.isEnabled = true
                 textField.borderStyle = UITextField.BorderStyle.roundedRect
             }
+            
             ChangeButton.isHidden = false
-            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save,
-                                                                           target: self,
-                                                                           action: #selector(self.saveContact))
+            
+            navigationItem.rightBarButtonItem = UIBarButtonItem(
+                barButtonSystemItem: .save,
+                target: self,
+                action: #selector(self.saveContact)
+            )
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(currentContact != nil) {
-                   txtName.text = currentContact!.contactName
-                   txtAddress.text = currentContact!.streetAddress
-                   txtCity.text = currentContact!.city
-                   txtState.text = currentContact!.state
-                   txtZip.text = currentContact!.zipCode
-                   txtHomePhone.text = currentContact!.phoneNumber
-                   txtCellPhone.text = currentContact!.cellNumber
-                   txtEmail.text = currentContact!.email
-                   let formatter = DateFormatter()
-                   formatter.dateStyle = .short
-                   if(currentContact!.birthday != nil){
-                       BirthDate.text = formatter.string(from: currentContact!.birthday as! Date)
-                   }
-               }
-      changeToEditMode(self)
         
-        let textFields: [UITextField] = [ txtName, txtCity,txtAddress,txtState,txtZip,txtHomePhone,txtCellPhone,txtEmail]
+        if(currentContact != nil) {
+            txtName.text = currentContact!.contactName
+            txtAddress.text = currentContact!.streetAddress
+            txtCity.text = currentContact!.city
+            txtState.text = currentContact!.state
+            txtZip.text = currentContact!.zipCode
+            txtHomePhone.text = currentContact!.phoneNumber
+            txtCellPhone.text = currentContact!.cellNumber
+            txtEmail.text = currentContact!.email
+            
+            let formatter = DateFormatter()
+            formatter.dateStyle = .short
+            
+            if(currentContact!.birthday != nil) {
+                BirthDate.text = formatter.string(from: currentContact!.birthday!)
+            }
+        }
+      
+        changeToEditMode(self)
+        
+        let textFields: [UITextField] = [
+            txtName,
+            txtCity,
+            txtAddress,
+            txtState,
+            txtZip,
+            txtHomePhone,
+            txtCellPhone,
+            txtEmail
+        ]
+        
         for textfield in textFields {
-            textfield.addTarget(self,action: #selector(UITextFieldDelegate.textFieldShouldEndEditing(_:)), for: UIControl.Event.editingDidEnd)
+            textfield.addTarget(
+                self,
+                action: #selector(UITextFieldDelegate.textFieldShouldEndEditing(_:)),
+                for: UIControl.Event.editingDidEnd
+            )
         }
     }
     
@@ -95,17 +127,17 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, DateControl
         currentContact?.streetAddress = txtAddress.text
         currentContact?.city = txtCity.text
         currentContact?.state = txtState.text
-         currentContact?.zipCode = txtZip.text
+        currentContact?.zipCode = txtZip.text
         currentContact?.cellNumber = txtCellPhone.text
         currentContact?.phoneNumber = txtHomePhone.text
-       currentContact?.email = txtEmail.text
-        return true
+        currentContact?.email = txtEmail.text
         
-        }
+        return true
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -118,15 +150,17 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, DateControl
         super.viewWillDisappear(animated)
         self.unregisterKeyboardNotifications()
     }
+    
     @objc func saveContact() {
-          if currentContact == nil {
-              let context = appDelegate.persistentContainer.viewContext
-              currentContact = Contact(context: context)
-          }
-          appDelegate.saveContext()
-          sgmtEditMode.selectedSegmentIndex = 0
-          changeToEditMode(self)
+      if currentContact == nil {
+          let context = appDelegate.persistentContainer.viewContext
+          currentContact = Contact(context: context)
       }
+
+      appDelegate.saveContext()
+      sgmtEditMode.selectedSegmentIndex = 0
+      changeToEditMode(self)
+    }
     
     /*This method registers the code for notifications and tells the system to execute the appropriate method when the event occurs.*/
     func registerKeyboardNotifications() {
@@ -154,7 +188,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, DateControl
         let keyboardInfo = userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue
         let keyboardSize = keyboardInfo.cgRectValue.size
         
-//        get existing ConsentTnset for the scrollView and set the bottom prop to be the height of the keyboard
+        //get existing ConsentTnset for the scrollView and set the bottom prop to be the height of the keyboard
         var contentInset = self.scrollView.contentInset
         contentInset.bottom = keyboardSize.height
         
@@ -170,13 +204,13 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, DateControl
         self.scrollView.contentInset = contentInset
         self.scrollView.scrollIndicatorInsets = UIEdgeInsets.zero
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
-    if(segue.identifier == "segueContactDate"){
-        let dateController = segue.destination as! DateViewController
-        dateController.delegate = self
+        if(segue.identifier == "segueContactDate"){
+            let dateController = segue.destination as! DateViewController
+            dateController.delegate = self
+        }
     }
-
-}
 
 }

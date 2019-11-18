@@ -17,20 +17,23 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         "ContactName", "City", "Birthday","EmailAddress"
     ]
     
-    //    this is what is preventing the preferences from getting saved.
+    //this is what is preventing the preferences from getting saved.
     func sortSettings() {
         let settings = UserDefaults.standard
-        settings.set("City", forKey: "sortField") //       getting a reference to the standard UserDefaults object
-        settings.string(forKey: "sortField") ?? ""    //        retrieve value
+        //getting a reference to the standard UserDefaults object
+        settings.set("City", forKey: "sortField")
+        //retrieve value
+        settings.string(forKey: "sortField")
 
-        settings.set(true, forKey: "sortDirectionAscending")    //       save bool value for ASC order
-        settings.bool(forKey: "sortDirectionAscending")    //    retrieve the  value
+        //save bool value for ASC order
+        settings.set(true, forKey: "sortDirectionAscending")
+        //retrieve the  value
+        settings.bool(forKey: "sortDirectionAscending")
     }
     //    WARNING !! is not supposed to wrapped in function
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
         pickSortField.dataSource = self
         pickSortField.delegate = self
@@ -56,24 +59,23 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         super.didReceiveMemoryWarning()
     }
     
-/*    UIPicker, Delegates, andthe data source methods */
-    
-//    number of rows to display
+    /*    UIPicker, Delegates, andthe data source methods */
+    //    number of rows to display
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-//    returns number of rows in picker
+    //returns number of rows in picker
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return sortOrderItems.count
     }
 
-//    set value that is displayed in each row in the picker
+    //set value that is displayed in each row in the picker
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return sortOrderItems[row]
     }
     
-//    print the item that was selected
+    //print the item that was selected
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let sortField = sortOrderItems[row]
         let settings = UserDefaults.standard
