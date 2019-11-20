@@ -12,6 +12,7 @@ import MapKit
 class MapPoint: NSObject, MKAnnotation{
     var title: String?
     var subtitle: String?
+    var subtitle2: String?
     var latitude: Double
     var longitude: Double
     

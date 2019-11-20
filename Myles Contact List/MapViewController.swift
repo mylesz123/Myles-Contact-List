@@ -42,10 +42,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
       //go through all contacts
       for contact in contacts { //as! [Contact] {
           let address = "\(contact.streetAddress!), \(contact.city!) \(contact.state!)"
+        
           //geocoding
           let geoCoder = CLGeocoder()
           geoCoder.geocodeAddressString(address) {(placemarks, error) in
               self.processAddressResponse(contact, withPlacemarks: placemarks, error: error)
+           
           }
       }
   }
@@ -62,8 +64,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
           }
           if let coordinate = bestMatch?.coordinate {
               let mp = MapPoint(latitude: coordinate.latitude, longitude: coordinate.longitude)
-              mp.title = contact.contactName
-              mp.subtitle = contact.streetAddress
+              mp.title = (contact.contactName!)
+            let addCityandState = "\(contact.streetAddress!),\(contact.city!),\(contact.state!)"
+            mp.subtitle = addCityandState
+            
+            
               mapView.addAnnotation(mp)
           }
           else {
@@ -92,6 +97,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                                 longitude: userLocation.coordinate.longitude)
                 mp.title = "You"
               mp.subtitle = "Are here"
+    mp.subtitle2 = "Right Now"
                mapView.addAnnotation(mp)
     }
     
