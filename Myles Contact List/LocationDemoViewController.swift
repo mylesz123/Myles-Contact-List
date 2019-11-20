@@ -5,9 +5,10 @@
 //  Created by Makaveli Ohaya on 11/17/19.
 //  Copyright © 2019 Myles Young. All rights reserved.
 //
-
+import CoreData
 import UIKit
 import CoreLocation
+
 
 class LocationDemoViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -24,6 +25,8 @@ class LocationDemoViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var lblAltitudeAccuracy: UILabel!
     lazy var geoCoder = CLGeocoder()
     var locationManager: CLLocationManager!
+   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +38,8 @@ class LocationDemoViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
     }
+   
+    
     override func viewDidDisappear(_ animated: Bool) {
         locationManager.stopUpdatingLocation()
         locationManager.stopUpdatingHeading()
@@ -80,7 +85,9 @@ class LocationDemoViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     @IBAction func AddresstoCoordinates(_ sender: Any) {
+     
         let address = "\(txtStreet.text!), \(txtCity.text!), \(txtState.text!))"
+       
         geoCoder.geocodeAddressString(address) {(placemarks, error) in
             self.processAddressResponse(withPlacemarks: placemarks, error: error)
         }
