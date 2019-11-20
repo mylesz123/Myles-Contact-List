@@ -40,7 +40,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
       //remove all annotations
       self.mapView.removeAnnotations(self.mapView.annotations)
       //go through all contacts
-      for contact in contacts { //as! [Contact] {
+      for contact in contacts {
           let address = "\(contact.streetAddress!), \(contact.city!) \(contact.state!)"
         
           //geocoding

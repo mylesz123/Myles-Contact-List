@@ -67,6 +67,36 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
             pickSortField.reloadComponent(1) // changes the picker view
         
     }
+    override func viewDidAppear(_ animated: Bool) {
+        let device = UIDevice.current
+        print("Device Info:")
+        print("Name: \(device.name)")
+        print("Model: \(device.model)")
+        print("System Name: \(device.systemName)")
+        print("System Version: \(device.systemVersion)")
+        print("Identifier: \(device.identifierForVendor!)")
+        
+        let orientation: String
+        switch device.orientation {
+        case .faceDown:
+            orientation = "Face Down"
+        case .landscapeLeft:
+            orientation = "Landscape Left"
+        case .portrait:
+            orientation="Portrait"
+        case .landscapeRight:
+            orientation = "Landscape Right"
+        case .faceUp:
+            orientation = "Face Up"
+        case .portraitUpsideDown:
+            orientation = "Portrait Upside Down"
+        case .unknown:
+            orientation = "Unknown Orientation"
+        }
+        print("Orientation: \(orientation)")
+       
+        
+    }
     
     
     override func didReceiveMemoryWarning() {
