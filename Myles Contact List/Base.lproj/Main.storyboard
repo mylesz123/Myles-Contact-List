@@ -320,6 +320,17 @@
                                     <action selector="findUser:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="FWA-iR-Wvh"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gxT-WM-bgi">
+                                <rect key="frame" x="104" y="782" width="206" height="32"/>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Hybrid"/>
+                                    <segment title="Satellite"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mapTypeChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="7Ph-zL-RUv"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -327,6 +338,7 @@
                             <constraint firstItem="Mkt-fE-mgo" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="6qE-4o-96i"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="Mkt-fE-mgo" secondAttribute="trailing" id="HXl-tg-aQn"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="Mkt-fE-mgo" secondAttribute="bottom" id="QRU-O5-g8U"/>
+                            <constraint firstItem="gxT-WM-bgi" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="TI5-l6-wcA"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="6tJ-wj-vQq" secondAttribute="trailing" constant="20" id="jOb-IF-QmQ"/>
                             <constraint firstItem="Mkt-fE-mgo" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="nnt-3t-A7D"/>
                         </constraints>
@@ -335,6 +347,7 @@
                     <tabBarItem key="tabBarItem" title="Map" image="globe" catalog="system" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="mapView" destination="Mkt-fE-mgo" id="93j-vy-Afu"/>
+                        <outlet property="sgmtMapType" destination="gxT-WM-bgi" id="snd-CF-2bT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
