@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -320,8 +320,8 @@
                                     <action selector="findUser:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="FWA-iR-Wvh"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gxT-WM-bgi">
-                                <rect key="frame" x="104" y="782" width="206" height="32"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gxT-WM-bgi">
+                                <rect key="frame" x="93.5" y="782" width="227" height="32"/>
                                 <segments>
                                     <segment title="Standard"/>
                                     <segment title="Hybrid"/>
@@ -339,6 +339,7 @@
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="Mkt-fE-mgo" secondAttribute="trailing" id="HXl-tg-aQn"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="Mkt-fE-mgo" secondAttribute="bottom" id="QRU-O5-g8U"/>
                             <constraint firstItem="gxT-WM-bgi" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="TI5-l6-wcA"/>
+                            <constraint firstItem="gxT-WM-bgi" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="agN-6u-zjc"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="6tJ-wj-vQq" secondAttribute="trailing" constant="20" id="jOb-IF-QmQ"/>
                             <constraint firstItem="Mkt-fE-mgo" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="nnt-3t-A7D"/>
                         </constraints>
