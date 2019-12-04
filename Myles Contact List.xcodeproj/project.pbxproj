@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1D1A16F0237304CB0034EABD /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1A16EF237304CB0034EABD /* DateViewController.swift */; };
+		1D1A16FD2378D0900034EABD /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1A16FC2378D0900034EABD /* ContactsTableViewController.swift */; };
 		1D268DAC237249D000473302 /* MyContactListModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D268DAA237249D000473302 /* MyContactListModel.xcdatamodeld */; };
+		1D8E34DC2383371B006016C9 /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8E34DB2383371B006016C9 /* MapPoint.swift */; };
+		1DA6D0582381D6F30031ECF0 /* LocationDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA6D0572381D6F30031ECF0 /* LocationDemoViewController.swift */; };
 		DE1F3E10236E3E4700469359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F3E0F236E3E4700469359 /* AppDelegate.swift */; };
 		DE1F3E12236E3E4700469359 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F3E11236E3E4700469359 /* SceneDelegate.swift */; };
 		DE1F3E14236E3E4700469359 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1F3E13236E3E4700469359 /* ContactsViewController.swift */; };
@@ -33,7 +36,10 @@
 
 /* Begin PBXFileReference section */
 		1D1A16EF237304CB0034EABD /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		1D1A16FC2378D0900034EABD /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		1D268DAB237249D000473302 /* MyContactListModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyContactListModel.xcdatamodel; sourceTree = "<group>"; };
+		1D8E34DB2383371B006016C9 /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
+		1DA6D0572381D6F30031ECF0 /* LocationDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDemoViewController.swift; sourceTree = "<group>"; };
 		DE1F3E0C236E3E4700469359 /* Myles Contact List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Myles Contact List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1F3E0F236E3E4700469359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE1F3E11236E3E4700469359 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +77,7 @@
 		DE1F3E03236E3E4700469359 = {
 			isa = PBXGroup;
 			children = (
+				1D8E34DB2383371B006016C9 /* MapPoint.swift */,
 				DEEF488B2371A26A00B3E210 /* Constants.swift */,
 				DE1F3E0E236E3E4700469359 /* Myles Contact List */,
 				DE1F3E27236E3E4800469359 /* Myles Contact ListTests */,
@@ -94,9 +101,11 @@
 				1D268DAA237249D000473302 /* MyContactListModel.xcdatamodeld */,
 				DE1F3E11236E3E4700469359 /* SceneDelegate.swift */,
 				DE1F3E13236E3E4700469359 /* ContactsViewController.swift */,
+				1DA6D0572381D6F30031ECF0 /* LocationDemoViewController.swift */,
 				1D1A16EF237304CB0034EABD /* DateViewController.swift */,
 				DE1F3E15236E3E4700469359 /* MapViewController.swift */,
 				DE1F3E17236E3E4700469359 /* Main.storyboard */,
+				1D1A16FC2378D0900034EABD /* ContactsTableViewController.swift */,
 				DE1F3E1A236E3E4800469359 /* Assets.xcassets */,
 				DE1F3E1C236E3E4800469359 /* LaunchScreen.storyboard */,
 				DE1F3E1F236E3E4800469359 /* Info.plist */,
@@ -221,8 +230,11 @@
 				DE1F3E14236E3E4700469359 /* ContactsViewController.swift in Sources */,
 				DE1F3E10236E3E4700469359 /* AppDelegate.swift in Sources */,
 				DE1F3E34236E416500469359 /* SettingsViewController.swift in Sources */,
+				1DA6D0582381D6F30031ECF0 /* LocationDemoViewController.swift in Sources */,
 				DE1F3E12236E3E4700469359 /* SceneDelegate.swift in Sources */,
 				1D268DAC237249D000473302 /* MyContactListModel.xcdatamodeld in Sources */,
+				1D1A16FD2378D0900034EABD /* ContactsTableViewController.swift in Sources */,
+				1D8E34DC2383371B006016C9 /* MapPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
